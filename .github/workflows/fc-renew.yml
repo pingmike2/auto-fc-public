@@ -52,7 +52,7 @@ on:
     #    cron 用 UTC，+8 小时才是北京时间；也避开整点，减少和其他任务撞车。
     #    统一 33 13 * * * → 北京 21:33（延期窗口宽 48 小时，三个号同点也不冲突：
     #    concurrency 按 workflow 名互斥，各跑各的）
-    - cron: '33 13 * * *'
+    - cron: '07 19 * * *'
   workflow_dispatch:
     inputs:
       phase:
