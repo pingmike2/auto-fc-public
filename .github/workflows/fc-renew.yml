@@ -22,7 +22,7 @@
 #   「每 29 天」，所以靠每天检查 + 服务端到期时间判断（--if-due）。
 #
 # 结构
-#   公开仓库只放 workflow + 时间文件，代码在私有仓库 jyucoeng/fc-private，
+#   公开仓库只放 workflow + 时间文件，代码在私有仓库 doraemon6789/fc-private，
 #   运行时用 PRIVATE_REPO_TOKEN 检出到工作区子目录里跑。
 #   私有库里不含任何 workflow —— 定时任务只在这里。
 #
@@ -108,7 +108,7 @@ jobs:
       FC_INTERVAL_DAYS: ${{ vars.FC_INTERVAL_DAYS || '29' }}
       FC_DUE_DAYS: ${{ vars.FC_DUE_DAYS || '2' }}
       # ── 私有仓库 ──────────────────────────────────────────────────────
-      PRIVATE_REPO: jyucoeng/fc-private
+      PRIVATE_REPO: doraemon6789/fc-private
       PROJECT_DIR: fc-private
       TIME_DIR: fc/1            # ⑤ 每个账号一个目录，别和别的账号共用
 
